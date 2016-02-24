@@ -118,7 +118,7 @@ function calculateMortgageCost () {
 
   var loan = Number(mortgage_loan.value);
   var apr = Number(mortgage_apr.value)/100.0;
-  var term = Number(mortgage_term.value);
+  var term = Number(mortgage_term.value)/12;
 
   var mortgageCost = (loan * apr * Math.pow((1+apr), term)) / (Math.pow((1+apr), term) - 1)
 
